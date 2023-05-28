@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  jekyll:
+    image: jekyll/jekyll
+    volumes:
+      - ./jekyll:/srv/jekyll
+    ports:
+      - 4000:4000
+    command: jekyll serve --watch --force_polling --verbose --trace
